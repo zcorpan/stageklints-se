@@ -35,25 +35,42 @@ h1 + p {
 
 h1, h2 { border-top: 1px solid gray; padding-top: 1.5rem; margin-top: 1.5rem; }
 
-.cards {
-  width: 100%;
-  overflow-x: scroll;
-  scroll-snap-type: x proximity;
-  white-space: nowrap;
-  margin-top: -1em;
-  padding-left: 1em;
-  scroll-padding-left: 1em;
+@media (min-width: 600px) {
+  .cards {
+    margin-top: -1em;
+    padding-left: 1em;
+    scroll-padding-left: 1em;
+    white-space: nowrap;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+  }
+  figure {
+    display: inline-block;
+    min-width: max-content;
+    margin: 1em 1em 1em 0;
+    scroll-snap-align: start;
+    padding: 0.5em;
+    box-shadow: gray 0 0 0.5em;
+  }
 }
 
-figure {
-  display: inline-block;
-  min-width: max-content;
-  margin: 1em 1em 1em 0;
-  scroll-snap-align: start;
-  padding: 0.5em;
-  background-color: white;
-  box-shadow: gray 0 0 0.5em;
+@media not (min-width: 600px) {
+  .cards {
+    box-shadow: gray 0 0 0.5em;
+    margin: 1em;
+  }
+  figure {
+    margin: 0;
+    padding: 0.5em;
+  }
+  figure img {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5em;
+  }
 }
+
 
 footer { margin-top: 2em; }
 
