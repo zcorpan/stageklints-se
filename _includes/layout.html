@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sv">
   <head>
+    <meta charset="utf-8">
     <title>{{ title }}</title>
-    <meta name="Description" content="{{ description }}" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" href="/assets/styles.css" />
+    <meta name="description" content="{{ description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="/assets/styles.css">
   </head>
   <body>
-    <div class="content">{{ content }}</div>
-    <script src="/assets/script.js"></script>
+    <header>
+      <img src="assets/img/header.png" alt="Stageklints värme &amp; kyla" width="963" height="320">
+    </header>
+    {{ content }}
+    <footer>
+     <img src="assets/img/footer.jpeg" alt="Stageklints värme &amp; kyla" width="1000" height="340">
+    </footer>
   </body>
 </html>
