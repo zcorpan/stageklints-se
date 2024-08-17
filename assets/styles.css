@@ -12,6 +12,7 @@ body {
   line-height: 1.5;
   background-color: white;
   color: black;
+  box-shadow: gray 0 0 2em;
 }
 
 header img, footer img {
@@ -34,8 +35,24 @@ h1 + p {
 
 h1, h2 { border-top: 1px solid gray; padding-top: 1.5rem; margin-top: 1.5rem; }
 
+.cards {
+  width: 100%;
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  white-space: nowrap;
+  margin-top: -1em;
+  padding-left: 1em;
+  scroll-padding-left: 1em;
+}
+
 figure {
-  margin: 1em 0;
+  display: inline-block;
+  min-width: max-content;
+  margin: 1em 1em 1em 0;
+  scroll-snap-align: start;
+  padding: 0.5em;
+  background-color: white;
+  box-shadow: gray 0 0 0.5em;
 }
 
 footer { margin-top: 2em; }
